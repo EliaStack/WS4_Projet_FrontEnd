@@ -1,0 +1,97 @@
+h1 {
+    color: black;
+}
+
+h2 {
+    color: gray;
+    font-size: 18px;
+}
+
+body {
+    background-color: rgb(237, 237, 231);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+.nav-left {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    align-items: center;
+    color: black;
+}
+
+.nav-right {
+    display: flex;
+    gap: 40px;
+    font-weight: normal;
+    font-size: 18px;
+    align-items: center;
+    border: 1px grey solid;
+    border-radius: 5px;
+}
+
+.nav-right a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* espace entre l’icône et le texte */
+    color: grey;
+    text-decoration: none;
+}/*/////////////////////////////////////////*/
+#tachesDetails {
+    display: flex;
+    flex-direction: column;
+    border: 2px rgba(0, 0, 0, 0.339) solid;
+    background-color: beige;
+    margin: 40px;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.taskName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+#buttonsTache {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    border: 2px black solid;
+    background-color: yellow;
+    border-radius: 8px;
+    justify-content: space-between;
+    max-width: 800px;
+}
+
+.taches {
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    border: 2px black solid;
+    background-color: blueviolet;
+    color: white;
+    padding: 15px;
+    margin: 15px;
+    gap: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* display: flex;
+    width: 5%;
+    justify-content: space-between;
+    border: 2px black solid;
+    align-items: center;
+    padding: 15px 30px;*/

@@ -1,0 +1,122 @@
+h1 {
+    color: black;
+}
+
+h2 {
+    color: gray;
+    font-size: 18px;
+}
+
+body {
+    background-color: rgb(237, 237, 231);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+
+}
+
+.nav-left {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    align-items: center;
+    color: black;
+}
+
+.nav-right {
+    display: flex;
+    gap: 40px;
+    font-weight: normal;
+    font-size: 18px;
+    align-items: center;
+    border: 1px grey solid;
+    border-radius: 5px;
+}
+
+.nav-right a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* espace entre l’icône et le texte */
+    color: grey;
+    text-decoration: none;
+}
+
+#BpSubmit {
+    display: flex;
+    background-color: blue;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#BplisteTache {
+    display: flex;
+    border: 2px rgba(0, 0, 0, 0.339) solid;
+    border-radius: 50px;
+    margin: 20px;
+    padding: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+#formConnexion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    padding: 20%;
+    background: rgb(202, 111, 111);
+    border-radius: 10px;
+
+}
+
+/*///////////////// FORMULAIRE ////////////////////////////////////////////////*/
+
+#connexion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+#contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+#image {
+    align-items: center;
+    display: flex;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0% 100% 100% 0% / 56% 0% 100% 44%;
+}
+
+#error{
+    color: red;
+    font-size: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* display: flex;
+    width: 5%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;*/

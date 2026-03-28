@@ -4,49 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <link rel="stylesheet" href="./styles/style_index.css">
+    <title>Page accueil</title>
+    <link rel="stylesheet" href="./styles/style_ac.css">
+    <script src="connexion.js" defer></script>
+
 </head>
 
 <body>
     <header>
-        <nav>
-            <li><img src="../images/footer/task_flow.png" alt="TaskFlow">TaskFlow</li>
-            <li><img src="../images/footer/accueil.png" alt="accueil">Accueil</li>
-            <li><img src="../images/footer/tache.png" alt="taches">Tâches</li>
-            <li><img src="../images/footer/statistique.png" alt="statistique">Statistiques</li>
-            <li><img src="../images/footer/connexion.png" alt="connexion"></li> <!-- manque lien JS -->
-            <li><img src="../images/footer/log_out.png" alt="log out"></li>
 
+        <nav class="nav-left">
+            <img src="../images/header/task_flow.png" alt="TaskFlow">
+            <span>TaskFlow</span>
         </nav>
+
+        <nav class="nav-right">
+            <a href="./index.html"><img src="../images/header/accueil.png" alt="Accueil">Accueil</a>
+            <a href="./gestionDesTaches.html"><img src="../images/header/tache.png" alt="Tâches">Tâches</a>
+            <a href="./statistiques.html"><img src="../images/header/statistique.png"
+                    alt="Statistiques">Statistiques</a>
+        </nav>
+
+
     </header>
-    <h1>Tableau de bord</h1>
-    <h2>Bienvenue sur votre espace de gestion des tâches</h2>
 
-    <section id="taches">
-        <!-- Productivité à été enlevé -->
-        <article class="tache_article">
-            <h3 class="tache_name">Tâches active</h3>
-            <p class="tache_value"><!-- manque lien JS --></p>
-            <img class="tache_png" src="../images/accueil/tache_active.png" alt="tache active">
-        </article>
-        <article class="tache_article">
-            <h3 class="tache_name">Tâches terminées</h3>
-            <p class="tache_value"><!-- manque lien JS --></p>
-            <img class="tache_png" src="../images/accueil/tache_done.png" alt="tache done">
-        </article>
-                <article class="tache_article">
-            <h3 class="tache_name">Collaborateurs</h3>
-            <p class="tache_value"><!-- manque lien JS --></p>
-            <img class="tache_png" src="../images/accueil/collaborateur.png" alt="tache collaborateur">
-        </article>
-         </section>
+    <div id="contain">
+        <img id="image" src="../images/Clarios_Background.png" alt="clarios">
 
+        <div id="connexion">
 
+            <img src="../images/connexion/connexion.png" alt="logo connexion">
+            <h1>Connexion</h1>
+            <h2>Accédez à votre espace de gestion des tâches</h2>
 
-    <footer>
+            <form id="formConnexion" action="">
+                <label for="prenom">Prenom</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Entrer votre prénom" required>
+                <label for="email">Adresse email</label>
+                <input type="email" id="email" name="email" placeholder="ex@hotmail.fr" required>
+                <label for="password">Password</label>
+                <input type="password" name="passeword" id="password" placeholder="Mot de passe" required>
+                <p id="error"></p>
+                <button type="submit" id="BpSubmit"> <img src="../images/header/log_out.png" alt="se connecter">Se
+                    connecter</button>
+            </form>
+            <button id="BplisteTache">Voir la liste des tâches</button>
 
-    </footer>
+        </div>
+
+    </div>
+
+    </div>
+
 </body>
 
 </html>
