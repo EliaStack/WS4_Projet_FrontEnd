@@ -148,8 +148,29 @@ fetch('http://localhost:3000/todos', {
     <p><strong>Date :</strong> ${project.created_at}</p>
     <p><strong>Status :</strong> ${project.is_complete}</p>
   `;
+
+                ////////// Affichage de la vue des détails ////////// 
+                //Bouton affichage détails
+                const bpdetailview = document.createElement('button');
+                bpdetailview.classList.add('btn-detailsview');
+                bpdetailview.textContent = 'Détails';
+
                 //Association Parent/Enfant//
                 detailsTask.appendChild(baliseDetail);
+                detailsTask.appendChild(bpdetailview);
+
+                //récupérer l'id sui a été mis dans l'url ds le fichier create_task et l'autre
+                const params = new URLSearchParams(window.location.search);
+                const id = params.get('id'); //on récupère la variable ID dans l'url
+                console.log(id);
+
+                bpdetailview.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    window.location.href = `./ws4_detailsTaches.html?id=${project.id}`;
+                    
+
+                })
+
             })
 
         });
