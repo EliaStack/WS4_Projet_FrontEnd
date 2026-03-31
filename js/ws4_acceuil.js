@@ -9,7 +9,7 @@ event.preventDefault();
 if(formulaireNom.value !== ''){
     window.localStorage.setItem('user', formulaireNom.value);
     console.log(localStorage.getItem('user'));
-    window.location.href ='./ws4_gestionDesTaches.html';
+    window.location.href ='./ws4_listeDesTaches.html';
 } else{
 formulaireError.textContent = 'Veuillez renseigner un nom'
 };

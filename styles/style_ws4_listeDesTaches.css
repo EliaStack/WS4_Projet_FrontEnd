@@ -1,0 +1,121 @@
+h1 {
+    color: black;
+}
+
+h2 {
+    color: gray;
+    font-size: 18px;
+}
+
+body {
+    background-color: rgba(255, 228, 196, 0.849)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.nav-left {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    align-items: center;
+    color: black;
+}
+
+.nav-right {
+    display: flex;
+    gap: 40px;
+    font-weight: normal;
+    font-size: 18px;
+    align-items: center;
+    border: 1px grey solid;
+    border-radius: 5px;
+}
+
+.nav-right a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* espace entre l’icône et le texte */
+    color: grey;
+    text-decoration: none;
+}
+
+/*/////////////////////////////////////////*/
+#tabl {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tachesEnCours {
+    display: flex;
+    flex-direction: column;
+    border: 2px rgba(0, 0, 0, 0.339) solid;
+    margin: 40px;
+    border-radius: 10px;
+    color: black;
+    background-color: blue;
+}
+
+.t1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+}
+
+#tachesJS {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.baliseTachesJS {
+    background-color: white;
+    border-radius: 10px;
+    padding: 12px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+/*//////////////// JS /////////////////////////*/
+
+
+.baliseNumProjet,
+.baliseSujet,
+.baliseDescription,
+.baliseDate,
+.baliseStatus{
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* display: flex;
+    width: 5%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 30px;*/
