@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page accueil</title>
     <link rel="stylesheet" href="./styles/style_ac.css">
-    <script src="connexion.js" defer></script>
+
+    <!-- Mise en commentaire pour le travail
+    <script src="./js/inscription.js" defer></script>
+    <script src="./js/connexion.js" defer></script> -->
 
 </head>
 
@@ -23,6 +26,8 @@
             <a href="./gestionDesTaches.html"><img src="../images/header/tache.png" alt="Tâches">Tâches</a>
             <a href="./statistiques.html"><img src="../images/header/statistique.png"
                     alt="Statistiques">Statistiques</a>
+            <a href="#" id="logout"><img src="../images/header/log_out.png" alt="déconnexion">Déconnexion</a>
+
         </nav>
 
 
@@ -44,9 +49,11 @@
                 <input type="email" id="email" name="email" placeholder="ex@hotmail.fr" required>
                 <label for="password">Password</label>
                 <input type="password" name="passeword" id="password" placeholder="Mot de passe" required>
+                <p id="errorConnexion"></p>
                 <p id="error"></p>
                 <button type="submit" id="BpSubmit"> <img src="../images/header/log_out.png" alt="se connecter">Se
                     connecter</button>
+                <button type="submit" id="inscriptionSubmit">Inscription</button>
             </form>
             <button id="BplisteTache">Voir la liste des tâches</button>
 

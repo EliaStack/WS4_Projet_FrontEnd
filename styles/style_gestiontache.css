@@ -45,7 +45,9 @@ header {
     color: grey;
     text-decoration: none;
 }
+
 /*/////////////////////////////////////////*/
+
 
 #tabl {
     max-width: 1200px;
@@ -84,6 +86,7 @@ header {
     border-radius: 10px;
     width: 400px;
     height: 400px;
+    color: black;
 
 }
 
@@ -113,6 +116,15 @@ header {
     width: 300px;
     border-radius: 8px;
 }
+
+
+
+.project-card {
+    background-color: white;
+    color: black;
+}
+
+
 
 
 

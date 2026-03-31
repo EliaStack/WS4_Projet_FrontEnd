@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/auth.js"></script>
+    <script src="./js/project.js" defer></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <h2 id="title"></h2>
+        <p id="description"></p>
+        <div class="task-item">
+            <div class="task-title">🐔 Finaliser le design responsive</div>
+            <span class="chip done">Terminée</span>
+            <div class="task-actions">
+                <button class="edit">Modifier</button>
+                <button class="delete">Supprimer</button>
+            </div>
+        </div>
+
+        <div class="task-form">
+            <h3 id="task-form-title" style="margin-bottom:1rem;">Ajouter une tâche</h3>
+            <form id="task-form">
+                <input id="task-title" type="text" placeholder="Titre de la tâche" required>
+                <textarea id="task-description" rows="3" placeholder="Description de la tâche"></textarea>
+                <select id="task-status">
+                    <option value="à faire">À faire</option>
+                    <option value="en cours">En cours</option>
+                    <option value="terminée">Terminée</option>
+                </select>
+                <button type="submit" id="task-form-button">Ajouter la tâche</button>
+            </form>
+        </div>
+        <div class="task-list">
+
+
+
+
+        </div>
+</body>
+
+</html>

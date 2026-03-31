@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une tâche</title>
+    <link rel="stylesheet" href="./styles/create_task.css">
+    <!-- MISE EN COMMENTAIRE CAUSE PROJET
+    <script src="./js/auth.js" defer></script> -->
+    <script src="./js/create-project.js" defer></script>
+</head>
+
+<body>
+    <header>
+
+        <nav class="nav-left">
+            <img src="../images/header/task_flow.png" alt="TaskFlow">
+            <span>TaskFlow</span>
+        </nav>
+
+        <nav class="nav-right">
+            <a href="./index.html"><img src="../images/header/accueil.png" alt="Accueil">Accueil</a>
+            <a href="./gestionDesTaches.html"><img src="../images/header/tache.png" alt="Tâches">Tâches</a>
+            <a href="./statistiques.html"><img src="../images/header/statistique.png"
+                    alt="Statistiques">Statistiques</a>
+            <a href="#" id="logout"><img src="../images/header/log_out.png" alt="déconnexion">Déconnexion</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="auth-layout">
+            <div class="form-card">
+                <h1>Nouveau projet</h1>
+
+                <form id="project-form">
+                    <input id="project-name" type="text" placeholder="Nom du projet" required>
+                    <textarea id="project-description" rows="4" placeholder="Description"></textarea>
+                    <p id="error" style="color: red;"></p>
+                    <button type="submit">Créer</button>
+                </form>
+
+                <p style="text-align:center;margin-top:1rem;">
+                    <a href="dashboard.html">Retour</a>
+                </p>
+            </div>
+
+            <div class="auth-image">
+                <img src="https://images.unsplash.com/photo-152202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80">
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2025 TaskFlow</footer>
+
+    <script></script>
+    ``
+</body>
+
+</html>
