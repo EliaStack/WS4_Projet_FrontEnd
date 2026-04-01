@@ -130,8 +130,8 @@ function Recup_Data() {
 
                     // bouton → image
                     const img_delete = document.createElement('img');
-                    // img_delete.src = '../images/bp_delete.png';
-                    //  img_delete.alt = 'Suppression de la tâche';
+                    img_delete.src = '../images/bp_delete.png';
+                    img_delete.alt = 'Suppression de la tâche';
                     bpdelete.appendChild(img_delete);
 
                     bpdelete.addEventListener('click', () => {
@@ -149,17 +149,37 @@ function Recup_Data() {
 
                     // bouton → image
                     const img_reopen = document.createElement('img');
-                    // img_reopen.src = '../images/bp_modifier.png';
-                    //img_reopen.alt = 'Réouverture de la tâche';
+                    img_reopen.src = '../images/bp_modifier.png';
+                    img_reopen.alt = 'Réouverture de la tâche';
                     bpreopen.appendChild(img_reopen);
 
                     bpreopen.addEventListener('click', () => {
                         modif_data(project);
                     });
 
+                    //BOUTON TACHE DONE (créé ici)
+                    const taskDone = document.querySelector('.TaskDone')
+
+                    const bpdone = document.createElement('button');
+                    bpdone.textContent = 'Tache done';
+
+                    bpdone.classList.add('btnDone');
+                    bpdone.dataset.projectId = project.id
+
+                    // bouton → image
+                    const img_done = document.createElement('img');
+                    img_done.src = '../images/bp_done.png';
+                    img_done.alt = 'Réouverture de la tâche';
+                    bpdone.appendChild(img_done);
+
+                    bpdone.addEventListener('click', () => {
+                        done_data(project);
+                    });
+
                     //ON LES INSÈRE DANS LA TÂCHE
                     taskDelete.appendChild(bpdelete);
                     taskModif.appendChild(bpreopen);
+                    taskDone.appendChild(bpdone);
 
                 })
         });
@@ -198,7 +218,7 @@ function modif_data(project) {
         body: JSON.stringify({
             id: project.id,
             text: project.text,
-            is_complete: false,       
+            is_complete: false,
             created_at: project.created_at
         })
     })
@@ -216,5 +236,32 @@ function modif_data(project) {
         });
 }
 
+function done_data(project) {
+    ////////////////// EventListener + PUT + refresh automatique
+    fetch(`http://localhost:3000/todos/${project.id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            id: project.id,
+            text: project.text,
+            is_complete: true,
+            created_at: project.created_at
+        })
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erreur modification tâche');
+            }
+
+            //Refresh automatique de la page
+            window.location.reload();
+        })
+        .catch(error => {
+            console.error(error);
+            alert('Impossible de modifier la tâche');
+        });
+}
 
 Recup_Data();
