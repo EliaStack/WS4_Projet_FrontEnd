@@ -114,9 +114,15 @@ a:active {
     overflow-y: auto;
     padding-right: 8px;
     /* évite que la barre cache le contenu */
-
-
 }
+
+.StatTaskEnCours {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+}
+
 
 /*//////////////// JS /////////////////////////*/
 .baliseTachesJS {

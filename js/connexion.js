@@ -3,8 +3,8 @@ const error = document.getElementById('errorConnexion');
 
 //On récupère le formulaire qui était dans le html
 const form = document.querySelector('#formConnexion')
-const email = document.querySelector('#email');
-const password = document.querySelector('#password');
+const formname = document.querySelector('#formName');
+const password = document.querySelector('#formpassword');
 
 
 //On écoute quand on envoie le formulaire
@@ -16,11 +16,11 @@ form.addEventListener('submit', (event) => {
     //on connecte l'utilisateur avec l'API
     fetch('http://localhost:3000/login', {
         method: "POST",
-        Headers: {
+        headers: {
             'content-type': 'application/json'
         },
         body: JSON.stringify({ //contenu de la requête qui doit être en json
-            email: email.value,
+            name: formname.value,
             password: password.value
         })
     })
@@ -30,7 +30,7 @@ form.addEventListener('submit', (event) => {
             console.log(data);
             if (data.accessToken) { //Si il est connecté il faut le rediriger Token c'est l'utilisateur
                 localStorage.setItem('token', data.accessToken); //on enregistre l'utilisateur
-                window.location.href = './gestionDesTaches.html'
+                window.location.href = './ws4_listeDesTaches.html';
             } else {
                 error.textContent = 'Identifiants invalides';
             }
