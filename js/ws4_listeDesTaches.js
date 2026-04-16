@@ -12,7 +12,8 @@ logout.addEventListener('click', function () {
 
 
 //récupération des données du serveur
-fetch('https://ws4projetbackend-production.up.railway.app:8080/todos', {
+fetch('https://ws4projetbackend-production.up.railway.app/todos', {
+    
     /* MISE EN COMMENTAIRE POUR TRAVAIL
     headers:{
         'Authorization':'Bearer' + token
