@@ -191,7 +191,7 @@ function delete_data(id) {
     const confirmDelete = confirm('Voulez-vous vraiment supprimer cette tâche ?');
     if (!confirmDelete) return;
 
-    fetch(`https://ws4projetbackend-production.up.railway.app:8080/todos/${id}`, {
+    fetch(`https://ws4projetbackend-production.up.railway.app/todos/${id}`, {
         method: 'DELETE'
     })
         .then(response => {
@@ -210,7 +210,7 @@ function delete_data(id) {
 
 function modif_data(project) {
     ////////////////// EventListener + PUT + refresh automatique
-    fetch(`https://ws4projetbackend-production.up.railway.app:8080/todos/${project.id}`, {
+    fetch(`https://ws4projetbackend-production.up.railway.app/todos/${project.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -238,7 +238,7 @@ function modif_data(project) {
 
 function done_data(project) {
     ////////////////// EventListener + PUT + refresh automatique
-    fetch(`https://ws4projetbackend-production.up.railway.app:8080/todos/${project.id}`, {
+    fetch(`https://ws4projetbackend-production.up.railway.app/todos/${project.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -267,7 +267,7 @@ function done_data(project) {
 Recup_Data();
 
 /*////////////////////////// STATTISTIQUE ///////////////////////////////*/
-fetch('https://ws4projetbackend-production.up.railway.app:8080/todos', {
+fetch('https://ws4projetbackend-production.up.railway.app/todos', {
     /* MISE EN COMMENTAIRE POUR TRAVAIL
     headers:{
         'Authorization':'Bearer' + token
