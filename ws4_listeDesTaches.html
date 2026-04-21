@@ -7,7 +7,7 @@
     <title>Liste des tâches</title>
     <link rel="stylesheet" href="./styles/style_ws4_listeDesTaches.css">
 
-   <!-- <script src="./js/auth.js" defer></script>  -->
+    <!-- <script src="./js/auth.js" defer></script>  -->
     <script src="./js/ws4_listeDesTaches.js" defer></script>
 </head>
 
@@ -32,8 +32,8 @@
         <section id="tachesEnCours">
             <div class="t1">
                 <p>Liste des tâches</p>
-                <!-- <button id="addTask"></button><img src="images/bp_plus.png" alt="Ajout d'une tâche"> -->
             </div>
+
             <div id="tachesJS">
                 <!-- PROVIENT DU FICHIER JS -->
             </div>
@@ -47,6 +47,19 @@
             <div class="detailsTask">
                 <!-- PROVIENT DU FICHIER JS -->
             </div>
+        </section>
+
+        <section id="TaskCreate">
+
+            <p class="t1">Ajout d'une tâche</p>
+
+            <form id="CreerTache" action="">
+                <label for="titreprojet">Titre de la tâche :</label>
+                <input id="titreprojet" type="text">
+                <label for="description">Description :</label>
+                <textarea name="description" id="description"></textarea>
+                <button id="buttonCreateTask" type="submit">Créer la tâche</button>
+            </form>
         </section>
     </section>
 

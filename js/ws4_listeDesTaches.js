@@ -13,7 +13,7 @@ logout.addEventListener('click', function () {
 
 //récupération des données du serveur
 fetch('https://ws4projetbackend-production.up.railway.app/todos', {
-    
+
     /* MISE EN COMMENTAIRE POUR TRAVAIL
     headers:{
         'Authorization':'Bearer' + token
@@ -168,7 +168,7 @@ fetch('https://ws4projetbackend-production.up.railway.app/todos', {
                 bpdetailview.addEventListener('click', (event) => {
                     event.preventDefault();
                     window.location.href = `./ws4_detailsTaches.html?id=${project.id}`;
-                    
+
 
                 })
 
@@ -181,6 +181,26 @@ fetch('https://ws4projetbackend-production.up.railway.app/todos', {
 /* const a = document.createElement('a');
 a.textContent = 'Voir le projet';
 a.href = 'detailsTaches?id=' + project.id; //Lié à l'id u projet */
+
+
+const FormCreateTask = document.getElementById('CreerTache');
+FormCreateTask.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const inputForm = document.getElementById('titreprojet');
+    const descriptionForm = document.getElementById('description');
+    const tags = descriptionForm.value.split(',') /*création tableau de tag */
+    console.log(tags);
+
+    fetch('https://ws4projetbackend-production.up.railway.app/todos', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text: inputForm.value, Tags: tags })
+    })
+
+});
 
 
 
