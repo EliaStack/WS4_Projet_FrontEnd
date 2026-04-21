@@ -184,6 +184,8 @@ a:active {
     gap: 10px;
     width: 120px;
     height: 50px;
+    color: black;
+    border: black;
 
 }
 
