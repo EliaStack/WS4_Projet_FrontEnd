@@ -184,7 +184,7 @@ a.href = 'detailsTaches?id=' + project.id; //Lié à l'id u projet */
 
 
 const FormCreateTask = document.getElementById('CreerTache');
-FormCreateTask.addEventListener('submit', (event) => {
+FormCreateTask.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const inputForm = document.getElementById('titreprojet');
@@ -192,15 +192,18 @@ FormCreateTask.addEventListener('submit', (event) => {
     const tags = descriptionForm.value.split(',') /*création tableau de tag */
     console.log(tags);
 
-    fetch('https://ws4projetbackend-production.up.railway.app/todos', {
+   await fetch('https://ws4projetbackend-production.up.railway.app/todos', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ text: inputForm.value, Tags: tags })
-    })
-
+    });
+    console.log('Création de la tâche');
+    window.location.reload();
+    console.log('Reload');
 });
+
 
 
 
