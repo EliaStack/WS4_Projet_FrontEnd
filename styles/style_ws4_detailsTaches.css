@@ -60,11 +60,9 @@ a:active {
 /*/////////////////////////////////////////*/
 #D {
     display: flex;
-justify-content: center;
+    justify-content: center;
     gap: 50PX;
     margin-top: 30px;
-    
-
 }
 
 
