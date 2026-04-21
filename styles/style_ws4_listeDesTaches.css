@@ -214,6 +214,9 @@ a:active {
     padding-bottom: 5px;
     margin-top: 5px;
 
+    color: white;
+    background-color: rgb(59, 130, 246);
+    border-color: black;
 }
 
 
