@@ -199,8 +199,10 @@ function delete_data(id) {
                 throw new Error('Erreur lors de la suppression');
             }
 
-            // ✅ REFRESH automatique de la page
-            window.location.reload();
+            //REFRESH automatique de la page
+            /*window.location.reload(); */
+            window.location.href = './ws4_listeDesTaches.html';
+
         })
         .catch(error => {
             console.error(error);

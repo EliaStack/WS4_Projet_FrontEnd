@@ -204,6 +204,7 @@ a:active {
     flex-direction: column;
     gap: 20px;
     width: 300px;
+    margin-left: 300px;
 }
 
 .NbreTacheEnCours,
@@ -221,7 +222,7 @@ a:active {
 .StatGlobal {
     display: flex;
     gap: 20px;
-    flex-direction: row
+    flex-direction: row;
 }
 
 .graph {
@@ -258,6 +259,7 @@ a:active {
     .StatTaskEnCours {
         display: flex;
         align-items: center;
+        margin-left: 0px;
     }
 
     .buttonNav {
